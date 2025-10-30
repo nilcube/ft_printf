@@ -6,33 +6,40 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:01:41 by smahraz           #+#    #+#             */
-/*   Updated: 2025/10/30 12:35:09 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/10/30 23:06:32 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+# include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
 
-# define P_PREFIX 0b00001     // '#': pre fix hex with '0x' or '0X'.
-# define P_ZPADDING 0b00010   // '.': padding with zeros.
-# define P_R_SPADDING 0b00100 // '-' : reverse padding.
-# define P_SPADDING 0b01000   // ' ': space padding.
-# define P_POS_SIGN 0b10000   // +: add + sign if the %d is positive.
+# define P_PREFIX 0b000001     // '#': pre fix hex with '0x' or '0X'.
+# define P_ZPADDING 0b000010   // '.': padding with zeros.
+# define P_R_SPADDING 0b000100 // '-' : reverse padding.
+# define P_SPADDING 0b001000   // ' ': space padding.
+# define P_POS_SIGN 0b010000   // +: add + sign if the %d is positive.
+# define P_NPADDING 0b100000   // "42"
 
 # define STDOUT 1
+# define CONVERSIONS "cspdiuxX%"
+# define FLAGS "#.- +0"
+# define HEX "0123456789ABCDEF"
+# define HEXL "0123456789abcdef"
 
-typedef struct print_block
-{
-	void	*data;
-	char	conv;
-	int		flags;
-}			t_printy;
+int	ft_printf(const char *fmt, ...);
 
-int			ft_printf(const char *fmt, ...);
-void		ft_putchar(char c);
-void		ft_putstr(char *s);
-int			ft_strlen(char *s);
+int	ft_putchar(char c);
+int	ft_putnbr(int n);
+int	ft_putstr(char *s);
+int	ft_puthex(char c, int n);
+
+int	ft_strlen(char *s);
+
+/*int	valid_flag(char c);
+int	valid_conversions(char c);
+int	ft_parse(va_list list, const char *sub_fmt);*/
 #endif

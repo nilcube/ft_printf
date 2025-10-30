@@ -6,7 +6,7 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:01:41 by smahraz           #+#    #+#             */
-/*   Updated: 2025/10/30 11:50:36 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/10/30 12:35:09 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 # define P_PREFIX 0b00001     // '#': pre fix hex with '0x' or '0X'.
 # define P_ZPADDING 0b00010   // '.': padding with zeros.
@@ -31,4 +32,7 @@ typedef struct print_block
 }			t_printy;
 
 int			ft_printf(const char *fmt, ...);
+void		ft_putchar(char c);
+void		ft_putstr(char *s);
+int			ft_strlen(char *s);
 #endif

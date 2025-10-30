@@ -1,28 +1,23 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-/*   Makefile                                           :+:      :+:    :+:   */
-#                                                     +:+ +:+         +:+      #
-#    By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/27 20:15:14 by smahraz           #+#    #+#              #
-/*   Updated: 2025/10/29 17:59:02 by smahraz          ###   ########.fr       */
-#                                                                              #
-# **************************************************************************** #
-
-
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = libftprintf.a
 
+LIBFT_DIR = libft
+LIBFT = $(LIBFT_DIR)/libft.a
+
+$(LIBFT):
+	$(MAKE) -C $(LIBFT_DIR)
 
 
 
 
+clean:
+	$(MAKE) clean -C $(LIBFT_DIR)
 
 
-
+fclean:
+	$(MAKE) fclean -C $(LIBFT_DIR)
 
 
 .PHONY: all re clean fclean 

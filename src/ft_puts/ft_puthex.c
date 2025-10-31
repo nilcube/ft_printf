@@ -6,7 +6,7 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 22:16:21 by smahraz           #+#    #+#             */
-/*   Updated: 2025/10/30 22:59:59 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/10/31 09:52:45 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_puthex(char c, int n)
 	int	i;
 	int	count;
 
+	if (!n)
+		return (ft_putchar('0'));
 	count = 0;
 	i = 4 * 8 - 4;
 	start_printing = 0;

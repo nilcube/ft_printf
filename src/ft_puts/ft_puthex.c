@@ -6,13 +6,13 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 22:16:21 by smahraz           #+#    #+#             */
-/*   Updated: 2025/10/31 09:52:45 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/10/31 11:03:45 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthex(char c, int n)
+int	ft_puthex(char c, unsigned int n)
 {
 	int	start_printing;
 	int	i;

@@ -6,13 +6,13 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 22:16:21 by smahraz           #+#    #+#             */
-/*   Updated: 2025/10/31 11:03:45 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/10/31 11:08:56 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthex(char c, unsigned int n)
+int	ft_puthex(char c, unsigned long n)
 {
 	int	start_printing;
 	int	i;
@@ -21,7 +21,7 @@ int	ft_puthex(char c, unsigned int n)
 	if (!n)
 		return (ft_putchar('0'));
 	count = 0;
-	i = 4 * 8 - 4;
+	i = 8 * 8 - 4;
 	start_printing = 0;
 	while (i >= 0)
 	{

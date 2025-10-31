@@ -6,7 +6,7 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:07:34 by smahraz           #+#    #+#             */
-/*   Updated: 2025/10/31 11:15:36 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/10/31 15:27:47 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 int	quick_print(char c, va_list list)
 {
+	unsigned long	adr;
+
 	if (c == '%')
 		ft_putchar('%');
 	else if (c == 'c')
@@ -29,7 +31,12 @@ int	quick_print(char c, va_list list)
 	else if (c == 'u')
 		return (ft_uputnbr(va_arg(list, unsigned int)));
 	else if (c == 'p')
-		return (ft_putstr("0x") + ft_puthex('x', va_arg(list, unsigned long)));
+	{
+		adr = va_arg(list, unsigned long);
+		if (adr)
+			return (ft_putstr("0x") + ft_puthex('x', adr));
+		return (ft_putstr("(nil)"));
+	}
 	return (1);
 }
 

@@ -19,8 +19,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-test: $(NAME) test.c
-	$(CC) -Iincludes test.c $(NAME) -o test
 
 re: fclean all
 

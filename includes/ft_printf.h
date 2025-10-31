@@ -6,7 +6,7 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:01:41 by smahraz           #+#    #+#             */
-/*   Updated: 2025/10/31 09:46:42 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/10/31 10:46:44 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	ft_printf(const char *fmt, ...);
 
 int	ft_putchar(char c);
 int	ft_putnbr(int n);
+int	ft_uputnbr(unsigned int n);
 int	ft_putstr(char *s);
 int	ft_puthex(char c, int n);
 

@@ -6,7 +6,7 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:07:34 by smahraz           #+#    #+#             */
-/*   Updated: 2025/10/31 09:45:23 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/10/31 10:48:35 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	quick_print(char c, va_list list)
 		return (ft_puthex(c, va_arg(list, int)));
 	else if (c == 's')
 		return (ft_putstr(va_arg(list, char *)));
+	else if (c == 'u')
+		return (ft_uputnbr(va_arg(list, unsigned int)));
 	return (1);
 }
 

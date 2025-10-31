@@ -6,7 +6,7 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 10:01:41 by smahraz           #+#    #+#             */
-/*   Updated: 2025/10/30 23:06:32 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/10/31 09:46:42 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_puthex(char c, int n);
 
 int	ft_strlen(char *s);
 
-/*int	valid_flag(char c);
 int	valid_conversions(char c);
+/*int	valid_flag(char c);
 int	ft_parse(va_list list, const char *sub_fmt);*/
 #endif

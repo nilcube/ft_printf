@@ -6,7 +6,7 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:07:34 by smahraz           #+#    #+#             */
-/*   Updated: 2025/10/30 22:14:09 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/10/31 09:45:23 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ int	quick_print(char c, va_list list)
 		ft_putchar('%');
 	else if (c == 'c')
 		ft_putchar(va_arg(list, int));
-	else if (c == 'd')
+	else if (c == 'd' || c == 'i')
 		return (ft_putnbr(va_arg(list, int)));
 	else if (c == 'x' || c == 'X')
 		return (ft_puthex(c, va_arg(list, int)));
+	else if (c == 's')
+		return (ft_putstr(va_arg(list, char *)));
 	return (1);
 }
 

@@ -27,15 +27,15 @@ int	quick_print(char c, va_list list)
 	else if (c == 'x' || c == 'X')
 		return (ft_puthex(c, va_arg(list, unsigned int)));
 	else if (c == 's')
-		return (ft_putstr(va_arg(list, char *)));
+		return (ft_putstr_null(va_arg(list, char *)));
 	else if (c == 'u')
 		return (ft_uputnbr(va_arg(list, unsigned int)));
 	else if (c == 'p')
 	{
 		adr = va_arg(list, unsigned long);
 		if (adr)
-			return (ft_putstr("0x") + ft_puthex('x', adr));
-		return (ft_putstr("(nil)"));
+			return (ft_putstr_null("0x") + ft_puthex('x', adr));
+		return (ft_putstr_null("(nil)"));
 	}
 	return (1);
 }

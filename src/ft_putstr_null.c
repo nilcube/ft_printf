@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_null.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,12 +12,12 @@
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *s)
+int	ft_putstr_null(char *s)
 {
 	int	len;
 
 	if (!s)
-		return (ft_putstr("(null)"));
+		return (ft_putstr_null("(null)"));
 	len = ft_strlen(s);
 	write(STDOUT, s, len);
 	return (len);

@@ -6,11 +6,12 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:07:34 by smahraz           #+#    #+#             */
-/*   Updated: 2025/11/01 22:20:36 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/11/01 22:31:11 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdarg.h>
 
 // static int	g_stdout_count = 0;
 
@@ -45,6 +46,8 @@ int	ft_printf(const char *fmt, ...)
 	va_list	list;
 	int		count;
 
+	if (!fmt)
+		return (-1);
 	count = 0;
 	va_start(list, fmt);
 	while (*fmt)
@@ -62,5 +65,6 @@ int	ft_printf(const char *fmt, ...)
 				count += ft_putchar(*fmt++);
 		}
 	}
+	va_end(list);
 	return (count);
 }

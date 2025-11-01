@@ -6,7 +6,7 @@
 /*   By: smahraz <smahraz@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:07:34 by smahraz           #+#    #+#             */
-/*   Updated: 2025/10/31 15:27:47 by smahraz          ###   ########.fr       */
+/*   Updated: 2025/11/01 22:20:36 by smahraz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	ft_printf(const char *fmt, ...)
 				fmt++;
 			}
 			else
-				fmt++;
+				count += ft_putchar(*fmt++);
 		}
 	}
 	return (count);

@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Iincludes
+CFLAGS = -Wall -Wextra -Werror -I.
 
 NAME = libftprintf.a
 SRCS = src/ft_parse.c src/ft_printf.c src/ft_putchar.c src/ft_puthex.c src/ft_putnbr.c src/ft_putstr_null.c src/ft_utils.c
@@ -9,7 +9,7 @@ OBJC = $(SRCS:.c=.o)
 all: $(NAME)
 
 
-$(NAME): $(OBJC) includes/ft_printf.h
+$(NAME): $(OBJC) ft_printf.h
 	ar rsc $(NAME) $(OBJC)
 
 
